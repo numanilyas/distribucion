@@ -1,0 +1,45 @@
+		<%= form_for(@product_sample, :html => { :multipart => true }) do |f| %>
+		  <% if @product_sample.errors.any? %>
+		    <div id="error_explanation">
+		      <h2><%= pluralize(@product_sample.errors.count, "error") %> prohibited this product_sample from being saved:</h2>
+		
+		      <ul>
+		      <% @product_sample.errors.full_messages.each do |msg| %>
+		        <li><%= msg %></li>
+		      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
+		
+		  <div class="field">
+		    <%= f.label "Product" %><br />
+		    <%= f.collection_select(:product_id, Product.all, :id, :title, :include_blank => "Please select...") %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :title %><br />
+		    <%= f.text_field :title %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :size %><br />
+		    <%= f.text_field :size %>
+		  </div>
+		  <div class="field">
+		    <%= f.label "Sort Index" %><br />
+		    <%= f.text_field :sort_index %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :description %><br />
+		    <%= f.text_area :description %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :price %><br />
+		    <%= f.text_field :price %>
+		  </div>
+		  <div class="field">
+		  	<%= f.label "Image" %><br />
+		  	<%= f.file_field :image %>
+		  </div>
+		  <div class="actions">
+		    <%= f.submit %>
+		  </div>
+		<% end %>

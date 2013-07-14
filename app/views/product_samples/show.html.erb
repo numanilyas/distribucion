@@ -1,0 +1,35 @@
+<%provide(:title, @product_sample.title)%>
+<% meta :description => @product_sample.description,
+        :keywords => @product_sample.title
+%>
+<% breadcrumb :sample, @product_sample %>
+<!-- p>
+  <b>Category:</b>
+  <%= @product_sample.product_id %>
+</p -->
+
+<legend><%= @product_sample.title %></legend>
+
+<p>
+  <%= @product_sample.description %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @product_sample.size %>
+</p>		
+
+<p>
+  <b>Price:</b>
+  <%= @product_sample.price %>
+</p>
+
+<p>		  
+  <%= image_tag @product_sample.image.url, :class => "img-polaroid"%>		  			
+</p>
+
+<!-- If Admin then show below buttons -->
+<% if !session[:admin].nil? && session[:admin] == 'true' %>
+	<%= link_to 'Edit', edit_product_sample_path(@product_sample), :class => "btn btn-info" %> |
+	<%= link_to 'Back', product_samples_path, :class => "btn btn-inverse" %>
+<% end %>

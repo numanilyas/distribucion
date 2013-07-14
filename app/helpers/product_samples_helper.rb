@@ -1,0 +1,2 @@
+module ProductSamplesHelper
+end

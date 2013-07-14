@@ -1,0 +1,20 @@
+<%provide(:title, 'Samples')%>
+<% meta :description => "Handmade Bullion Crests, Emblems, Church Embroidery, Christmas Collection",
+        :keywords => "Handmade Bullion Crests, Emblems, Church Embroidery, Christmas Collection, Free Quote, Low Price Handmade Embroidery"
+%>
+<h3 style="margin-bottom: 0px">Samples</h3>
+<hr style="margin-top: 2px"/>
+
+<p>
+	Distribucion Es Guadalquivir has been providing superior quality services to our customers for more than a decade. Please see below samples pages to get an overview of expertise.  
+</p>
+
+<% @products.each do |product| %>
+	<a href=<%= samples_path(product)%>><legend><%= product.title %></legend></a>
+	<p><%= product.description %></p>
+	<p>		  
+	  <%= link_to image_tag(product.image.url, :class => "img-polaroid productthumbnail"), samples_path(product) %>		  			
+	</p>
+<% end %>
+<%= will_paginate @products %>
+

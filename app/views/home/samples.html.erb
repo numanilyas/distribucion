@@ -1,0 +1,40 @@
+<%provide(:title, @product.title)%>
+<% meta :description => @product.description,
+        :keywords => @product.title
+%>
+<% breadcrumb :samples, @product %>
+
+<h3 style="margin-bottom: 0px"><%= @product.title %></h3>
+<hr style="margin-top: 2px; margin-bottom: 2px"/>
+<p><%= @product.description %></p>
+<ul class="thumbnails">
+<% @product_samples.each do |product_sample| %>
+	
+	  <li class="span3">
+	  	<div class="thumbnail">	  		
+	      <%= link_to image_tag(product_sample.image.url(:thumb), {:alt => product_sample.title}), sample_url(@product, product_sample), {:remote => true, :class => 'thumbnail thumbnailcustom', 'data-toggle' => 'modal', 'data-target' => "#myModal", 'data-backdrop' => true, 'data-keyboard' => true} %>	      
+		    <div class="caption">
+          <div class="customheight">
+          <h5 style="color: #0088CC; margin-top: 0px; margin-bottom: 0px;"><%= product_sample.title %></h5>
+        	<p style="margin-top: 0px; margin-bottom: 0px;">Size: <%= product_sample.size %></p>
+    	    <p style="margin-top: 0px; margin-bottom: 0px;">Price: <%= product_sample.price %></p>
+    	    </div>
+          <p align="center">          	
+            <!-- a href="#myModal<%=product_sample.id.to_s%>" class="btn btn-inverse btn-block" data-toggle="modal">View More information</a -->
+            
+            <%= link_to "View Details", sample_url(@product, product_sample), {:remote => true, :class => "btn btn-inverse btn-block", 'data-toggle' => 'modal', 'data-target' => "#myModal", 'data-backdrop' => true, 'data-keyboard' => true} %>
+          </p>
+        </div>
+	    </div>
+	  </li>	
+<% end %>
+</ul>
+<!-- Modal -->
+<div id="myModal" class="modal hide fade mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  
+  <!-- div class="modal-footer">				  	
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div -->
+</div>		
+<%= will_paginate @product_samples %>

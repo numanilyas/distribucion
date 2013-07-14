@@ -1,0 +1,33 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.modal-body {
+  max-height: 750px;
+  
+}
+
+.mymodal {
+  width: 950px; /* SET THE WIDTH OF THE MODAL */
+ max-height: 700px;
+  margin: -20px 0 0 -475px; /* CHANGE MARGINS TO ACCOMODATE THE NEW WIDTH (original = margin: -250px 0 0 -280px;) */
+}
+
+.imageheight {
+  max-height: 600px;
+  
+}
+
+.thumbnailcustom {
+  min-height: 250px;    
+}
+
+.customheight {
+  min-height: 85px;
+}
+
+.productthumbnail {
+ max-height: 350px;
+ max-width: 100%; 
+}

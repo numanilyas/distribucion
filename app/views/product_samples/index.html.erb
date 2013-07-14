@@ -1,0 +1,40 @@
+<%provide(:title, 'Product Samples')%>
+<h1>Product Samples</h1>
+
+<table width="100%" class="table table-striped table-bordered table-hover table-condensed">
+	<thead>
+  <tr>
+    <th>Category</th>
+    <th>Title</th>
+    <th>Size</th>
+    <th>Sort Index</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Image</th>
+    <th>View</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+	<tbody>
+<% @product_samples.each do |product_sample| %>
+  <tr>
+    <td><%= product_sample.product.title %></td>
+    <td><%= product_sample.title %></td>
+    <td><%= product_sample.size %></td>
+    <td><%= product_sample.sort_index %></td>
+    <td><%= product_sample.description %></td>
+    <td><%= product_sample.price %></td>
+    <td><%= image_tag product_sample.image.url(:thumb) %></td>
+    <td><%= link_to 'Show', sample_url(product_sample.product, product_sample), :class => "btn btn-inverse" %></td>
+    <td><%= link_to 'Edit', edit_product_sample_path(product_sample), :class => "btn btn-info" %></td>
+    <td><%= link_to 'Destroy', product_sample, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+  </tr>
+<% end %>
+	</tbody>
+</table>
+
+<br />
+
+<%= link_to "New Product Sample", new_product_sample_path, :class => "btn btn-inverse" %>
+		

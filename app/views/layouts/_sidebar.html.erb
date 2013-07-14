@@ -1,0 +1,48 @@
+<div class="well sidebar-nav">
+  <ul class="nav nav-list">
+    <li class="nav-header" style="background-color: #171717; color: #999999">Samples</li>
+    
+    <% @products.each do |product| %>
+      <li class="<%= 'active' if params[:id] == product.slug %>">	              
+      	<%= link_to product.title, samples_path(product) %>
+      </li>
+    <% end %>
+    
+    <!-- 
+    <% if !session[:recent_views].nil? %>
+    	<li class="nav-header" style="background-color: #171717; color: #999999">Recent Sample Views</li>
+    	<% count = 0 %>
+    	<% session[:recent_views].each do |slug, title| %>
+    		<% if count == 10 %>
+    			<% break %>
+    		<% else %>
+    			<% count = count + 1 %>
+    		<% end %>
+    		<li class="<%= 'active' if params[:id] == slug %>">
+    			<%= link_to title, sample_url(get_product_id(slug), slug) %>
+    		</li>
+    		
+    	<% end %>
+    <% end %>    
+    -->
+    <% if !session[:admin].nil? && session[:admin] == 'true' %>
+	    <li class="nav-header" style="background-color: #171717; color: #999999">Admin Tasks</li>
+	    <li class="<%= 'active' if params[:controller] == 'products' && params[:action] == 'index' %>">	              
+      	<%= link_to "Manage Products", products_path %>
+      </li>
+      <li class="<%= 'active' if params[:controller] == 'products' && params[:action] == 'new' %>">
+      	<%= link_to 'New Product', new_product_path %>
+      </li>
+      <li class="<%= 'active' if params[:controller] == 'product_samples' && params[:action] == 'index' %>">	              
+      	<%= link_to "Manage Product Samples", product_samples_path %>
+      </li>
+      <li class="<%= 'active' if params[:controller] == 'product_samples' && params[:action] == 'new' %>">
+      	<%= link_to "New Product Sample", new_product_sample_path %>
+      </li>	    
+      <li class="<%= 'active' if params[:controller] == 'quotes' && params[:action] == 'index' %>">	              
+      	<%= link_to "Manage Quotes", quotes_path %>
+      </li>
+      	
+	  <% end %>
+  </ul>
+</div><!--/.well -->

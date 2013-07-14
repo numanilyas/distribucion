@@ -1,0 +1,71 @@
+<%provide(:title, 'Quote')%>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Width:</b>
+  <%= @quote.width %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @quote.height %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @quote.quantity %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @quote.comments %>
+</p>
+
+<p>
+  <b>Requiredate:</b>
+  <%= @quote.requiredate %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @quote.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @quote.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @quote.phone %>
+</p>
+
+<p>
+  <b>Fax:</b>
+  <%= @quote.fax %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @quote.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @quote.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @quote.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @quote.zip %>
+</p>
+
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

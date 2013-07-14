@@ -1,0 +1,27 @@
+// Place all the styles related to the product_samples controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+a.navImages{
+    position:absolute;
+    top:10px;
+    cursor:pointer;
+}
+#imagesDiv a#prev{
+    color:red;
+    left:10px; 
+
+}*/
+#imagesDiv a#next{
+  //color: #171717;
+    //right:40px;    
+}
+#imagesDiv a#prev{
+  //color: #171717;
+    //margin-left: -27px;    
+}
+#imagesDiv{
+   position:relative;
+   text-align:center
+  
+}

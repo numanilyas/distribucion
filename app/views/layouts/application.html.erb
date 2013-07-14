@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <title><%= full_title(yield(:title)) %></title>
+  <%= metamagic %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/shim'%>    
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<%= render 'layouts/navigation'%>
+				<%= render 'layouts/carousel' if (params['controller'] == 'home' && (params['action'] == 'index' || params['action'] == 'contactus' || params['action'] == 'routing_error' )) %>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="span3">
+				<%= render 'layouts/sidebar' %>
+			</div>
+			<div class="span9">
+				<div style="background-color: #F5F5F5; border-radius: 1px">
+					<div id="breadcrumb">
+				    <%= breadcrumbs :pretext => "Site Navigation:",
+				                   :separator => "&rsaquo;",
+				                   :autoroot => true,
+				                   :show_root_alone => false,
+				                   :link_last => false,
+				                   :semantic => true	                    
+				 		%>
+					</div>
+				</div>
+				<%= render 'layouts/messages' %>
+				<%= yield %>						
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<%#= render 'layouts/footer'%>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

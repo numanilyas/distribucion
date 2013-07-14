@@ -1,0 +1,124 @@
+
+<%= form_for(@quote, :html => { :multipart => true, :class=>"form-horizontal"}) do |f| %>
+  <% if @quote.errors.any? %>
+	  <div id="error_explanation">
+	    <div class="alert alert-error">
+	      The form contains <%= pluralize(@quote.errors.count, "error") %>.
+	    </div>
+	    <ul>
+	    <% @quote.errors.full_messages.each do |msg| %>
+	      <li><%= msg %></li>
+	    <% end %>
+	    </ul>
+	  </div>
+	<% end %>
+	
+	<fieldset>
+		<legend>Patch Information</legend>
+		<div class="control-group">
+			<%= f.label :width, :class => "control-label required" %>
+			<div class="controls">
+				<%= f.text_field :width %>
+			</div>
+	  </div>
+	  <div class="control-group">
+		  <%= f.label :height, :class => "control-label required" %>
+		  <div class="controls">
+	    	<%= f.text_field :height %>
+	    </div>
+	  </div>
+	   
+		<div class="control-group">
+		 	<%= f.label :quantity, :class => "control-label required" %>
+		  <div class="controls">
+	    	<%= f.text_field :quantity%>
+	    </div>
+	  </div>
+	  
+	  <div class="control-group">
+		 	<%= f.label "Date on which patches required", :class => "control-label", :for => "quote_requiredate" %>
+		  <div class="controls">
+	    	<%= f.text_field :requiredate%>
+	    </div>
+	  </div>
+	  
+	  <div class="control-group">
+		 	<%= f.label "Patch Design", :class => "control-label required", :for => "quote_image" %>
+		  <div class="controls">
+	    	<%= f.file_field :image %>
+	    </div>
+	  </div>
+	  
+	  <div class="control-group">
+		 	<%= f.label :comments, :class => "control-label" %>
+		  <div class="controls">
+	    	<%= f.text_area :comments, :rows => "5" %>
+	    </div>
+	  </div>
+	   
+  </fieldset>	    
+
+	<fieldset>
+		<legend>Contact Information</legend>
+		<div class="control-group">
+		 	<%= f.label :name, :class => "control-label required" %>
+		  <div class="controls">
+	    	<%= f.text_field :name%>
+	    </div>
+	  </div>
+	  
+	  <div class="control-group">
+		 	<%= f.label :email, :class => "control-label required" %>
+		  <div class="controls">
+	    	<%= f.text_field :email%>
+	    </div>
+	  </div>
+	  
+	  <div class="control-group">
+		 	<%= f.label :phone, :class => "control-label" %>
+		  <div class="controls">
+	    	<%= f.text_field :phone%>
+	    </div>
+	  </div>
+	  
+	  <div class="control-group">
+		 	<%= f.label :fax, :class => "control-label" %>
+		  <div class="controls">
+	    	<%= f.text_field :fax%>
+	    </div>
+	  </div>
+	  
+	  <div class="control-group">
+		 	<%= f.label :address, :class => "control-label" %>
+		  <div class="controls">
+	    	<%= f.text_field :address%>
+	    </div>
+	  </div>
+	  
+	  <div class="control-group">
+		 	<%= f.label :city, :class => "control-label" %>
+		  <div class="controls">
+	    	<%= f.text_field :city%>
+	    </div>
+	  </div>
+	  
+	  <div class="control-group">
+		 	<%= f.label :state, :class => "control-label" %>
+		  <div class="controls">		    	
+	    	<%= f.select :state, options_for_select(us_states), :prompt => '--Please Select--' %>
+	    </div>
+	  </div>
+	  
+	  <div class="control-group">
+		 	<%= f.label :zip, :class => "control-label" %>
+		  <div class="controls">
+	    	<%= f.text_field :zip%>
+	    </div>
+	  </div>
+		
+	</fieldset>  
+  <div class="span3"></div>  
+  <%= f.submit "Submit", :class => "btn btn-inverse"%>
+  
+
+<% end %>
