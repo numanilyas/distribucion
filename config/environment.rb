@@ -8,13 +8,13 @@ Embroideryshop::Application.configure do
   config.action_mailer.delivery_method = :smtp
   
   config.action_mailer.smtp_settings = {
-    :address => "smtp.gmail.com",
-    :port => 587,
+    :address => ENV['SMTP'],
+    :port => ENV['SMTP_PORT'],
     #:domain => "www.embroideryshop.com", 
-    :authentication => "plain",
-    :user_name => "nilyas121@gmail.com",
-    :password =>  "nomite123",
-    :enable_starttls_auto => true 
+    :authentication => ENV['SMTP_AUTHENTICATION'],
+    :user_name => ENV['SMTP_USER'],
+    :password =>  ENV['SMTP_PASSWORD'],
+    :enable_starttls_auto => ENV['SMTP_STARTTLS_AUTO']  
   }
   
 end
