@@ -38,10 +38,7 @@
       </li>
       <li class="<%= 'active' if params[:controller] == 'product_samples' && params[:action] == 'new' %>">
       	<%= link_to "New Product Sample", new_product_sample_path %>
-      </li>	    
-      <li class="<%= 'active' if params[:controller] == 'quotes' && params[:action] == 'index' %>">	              
-      	<%= link_to "Manage Quotes", quotes_path %>
-      </li>
+      </li>      
       	
 	  <% end %>
   </ul>

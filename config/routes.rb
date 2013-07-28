@@ -2,7 +2,7 @@ Embroideryshop::Application.routes.draw do
   match 'sitemap.xml' => 'sitemaps#sitemap'
   match 'site-map' => 'home#sitemap', :as => :sitemap
 
-  resources :quotes
+  #resources :quotes
 
 
   resources :product_samples, :except => :show
@@ -23,12 +23,12 @@ Embroideryshop::Application.routes.draw do
   match "/samples", to: "home#products", :as => :productsamples
   match "/about-us", to: "home#aboutus", :as => :aboutus
   match "/contact-us", to: "home#contactus", :as => :contactus
-  match "/how-to-place-order", to: "home#howwework", :as => :howwework
-  match "/pricing", to: "home#pricing"
-  match "/faqs", to: "home#faqs"
-  match "/privacy-policy", to: "home#privacypolicy", :as => :privacypolicy
+  #match "/how-to-place-order", to: "home#howwework", :as => :howwework
+  #match "/pricing", to: "home#pricing"
+  #match "/faqs", to: "home#faqs"
+  #match "/privacy-policy", to: "home#privacypolicy", :as => :privacypolicy
   
-  match "/free-quote", to: "quotes#new", :as => :newquote
+  #match "/free-quote", to: "quotes#new", :as => :newquote
   match '*unmatched_route', to: 'home#routing_error'
 
   # The priority is based upon order of creation:

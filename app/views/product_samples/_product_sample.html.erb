@@ -19,11 +19,10 @@
 		    		<h5>Description</h5>
 			    	<p><%=product_sample.description%></p>
 			    	<p><strong>Size: </strong><%=product_sample.size%></p>
-			    	<p><strong>Price: </strong><%=product_sample.price%></p>
+			    	<!-- p><strong>Price: </strong><%#=product_sample.price%></p -->
 			    	<p align="center">
 		          <!-- a href="#" class="btn btn-inverse btn-block" data-toggle="modal">Free Quote</a -->
-		          <%= link_to "View Larger Image", sample_url(product_sample.product.slug, product_sample), :class => "btn btn-inverse btn-block"%>
-		          <%= link_to "Free Quote", newquote_url, :class => "btn btn-inverse btn-block"%>
+		          <%= link_to "View Larger Image", sample_url(product_sample.product.slug, product_sample), :class => "btn btn-inverse btn-block"%>	          
 		          
 		        </p>
 			    </div>						    	
