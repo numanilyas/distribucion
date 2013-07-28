@@ -9,12 +9,12 @@
 	Distribuciones Guadalquivir has been providing superior quality services to our customers for more than a decade. Please see below products pages to get an overview of expertise.  
 </p>
 
-<% @products.each do |product| %>
+<% @sample_products.each do |product| %>
 	<a href=<%= samples_path(product)%>><legend><%= product.title %></legend></a>
 	<p><%= product.description %></p>
 	<p>		  
 	  <%= link_to image_tag(product.image.url, :class => "img-polaroid productthumbnail"), samples_path(product) %>		  			
 	</p>
 <% end %>
-<%= will_paginate @products %>
+<%= will_paginate @sample_products %>
 

@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   end
   
   def products
-    @products = Product.paginate(page: params[:page], :per_page => 10)
+    @sample_products = Product.paginate(page: params[:page], :per_page => 10)
   end
   
   def aboutus
