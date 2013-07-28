@@ -12,17 +12,17 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <%= link_to "Distribucion Es Guadalquivir", root_url, :class => "brand"%>
+            <%= link_to "Distribuciones Guadalquivir", root_url, :class => "brand"%>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="<%= 'active' if params[:action] == 'index' && params[:controller] == 'home' %>"><%= link_to "Home", root_url %></li>                
-                <li class="<%= 'active' if params[:action] == 'products' %>"><%= link_to "Samples", productsamples_url %></li>
+                <li class="<%= 'active' if params[:action] == 'products' %>"><%= link_to "Products", productsamples_url %></li>
                 <!-- li class="<%#= 'active' if params[:action] == 'pricing' %>"><%#= link_to "Pricing", pricing_url %></li -->
                 <li class="<%= 'active' if params[:action] == 'aboutus' %>"><%= link_to "About Us", aboutus_url %></li>
                 <li class="<%= 'active' if params[:action] == 'contactus' %>"><%= link_to "Contact Us", contactus_url %></li>
                 <!-- li class="<%#= 'active' if params[:action] == 'howwework' %>"><%#= link_to "How To Place Order", howwework_url %></li -->
-                <li class="<%= 'active' if params[:action] == 'new' && params[:controller] == 'quotes' %>"><%= link_to "Free Quote", newquote_url %></li>
+                <!-- li class="<%#= 'active' if params[:action] == 'new' && params[:controller] == 'quotes' %>"><%#= link_to "Free Quote", newquote_url %></li -->
                 <!-- li class="<%#= 'active' if params[:action] == 'faqs' %>"><%#= link_to "FAQs", faqs_url %></li -->
                 
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->

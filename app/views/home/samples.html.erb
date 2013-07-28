@@ -4,8 +4,8 @@
 %>
 <% breadcrumb :samples, @product %>
 
-<h3 style="margin-bottom: 0px"><%= @product.title %></h3>
-<hr style="margin-top: 2px; margin-bottom: 2px"/>
+<h1><%= @product.title %></h1>
+<hr/>
 <p><%= @product.description %></p>
 <ul class="thumbnails">
 <% @product_samples.each do |product_sample| %>
