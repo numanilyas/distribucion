@@ -8,21 +8,21 @@
 				<div class="span7" id="imagesDiv">
 			    <%= image_tag product_sample.image.url, :class => "img-polaroid imageheight", :alt => product_sample.title%>
     			<% if !@next_sample.nil? %>		          	
-          	<%= link_to '&rsaquo;'.html_safe, sample_url(@next_sample.product, @next_sample), {:remote => true, :id => "next", :title => "Next Sample", :class => "right carousel-control"} %>		          
+          	<%= link_to '&rsaquo;'.html_safe, sample_url(@next_sample.product, @next_sample), {:remote => true, :id => "next", :title => "Siguiente Producto", :class => "right carousel-control"} %>		          
           <% end %>
           <% if !@previous_sample.nil? %>
-          	<%= link_to '&lsaquo;'.html_safe, sample_url(@previous_sample.product, @previous_sample), {:remote => true, :id => "prev", :title => "Previous Sample", :class => "left carousel-control"} %>		          
+          	<%= link_to '&lsaquo;'.html_safe, sample_url(@previous_sample.product, @previous_sample), {:remote => true, :id => "prev", :title => "Producto Anterior", :class => "left carousel-control"} %>		          
           <% end %>
 		    </div>
 		    <div class="span5">
 		    	<div class="well" style="height: 100%">
-		    		<h5>Description</h5>
+		    		<h5>Descripción</h5>
 			    	<p><%=product_sample.description%></p>
 			    	<p><strong>Size: </strong><%=product_sample.size%></p>
 			    	<!-- p><strong>Price: </strong><%#=product_sample.price%></p -->
 			    	<p align="center">
 		          <!-- a href="#" class="btn btn-inverse btn-block" data-toggle="modal">Free Quote</a -->
-		          <%= link_to "View Larger Image", sample_url(product_sample.product.slug, product_sample), :class => "btn btn-inverse btn-block"%>	          
+		          <%= link_to "Ver Imagen Ampliada", sample_url(product_sample.product.slug, product_sample), :class => "btn btn-inverse btn-block"%>	          
 		          
 		        </p>
 			    </div>						    	

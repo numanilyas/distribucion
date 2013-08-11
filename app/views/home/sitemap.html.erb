@@ -1,15 +1,15 @@
-<%provide(:title, 'Site Map')%>
-<% meta :description => "Handmade Bullion Crests, Emblems, Church Embroidery, Christmas Collection",
-        :keywords => "Handmade Bullion Crests, Emblems, Church Embroidery, Christmas Collection, Free Quote, Highest Quality at Low price, Frequently Asked Questions"
+<%provide(:title, 'Mapa del Sitio')%>
+<% meta :description => "Crestas mano lingotes, emblemas, Bordado Iglesia, Colección de Navidad",
+        :keywords => "Crestas mano lingotes, emblemas, Bordado Iglesia, Colección de Navidad, cita libre, alta calidad a bajo precio, Preguntas frecuentes"
 %>
-<h1>Site Map</h1>
+<h1>Mapa del Sitio</h1>
 <hr/>
 <ul>
 	<li>
-		<%= link_to "Home", root_url %>
+		<%= link_to "Casa", root_url %>
 	</li>
 	<li>
-		<%= link_to "Products", productsamples_url %>	
+		<%= link_to "Productos", productsamples_url %>	
 		<ul>
 			<% @products.each do |product| %>
 		    <li>	              
@@ -19,9 +19,9 @@
 		</ul>
 	</li>	
 	<li>
-		<%= link_to "About Us", aboutus_url %>		
+		<%= link_to "Quiénes somos", aboutus_url %>		
 	</li>
 	<li>
-		<%= link_to "Contact Us", contactus_url %>		
+		<%= link_to "Contáctenos", contactus_url %>		
 	</li>
 </ul>
