@@ -8,11 +8,11 @@ DynamicSitemaps::Sitemap.draw do
   
   url aboutus_url, :last_mod => DateTime.now, :change_freq => 'daily', :priority => 0.8
   url contactus_url, :last_mod => DateTime.now, :change_freq => 'daily', :priority => 0.8
-  url howwework_url, :last_mod => DateTime.now, :change_freq => 'daily', :priority => 0.8
-  url pricing_url, :last_mod => DateTime.now, :change_freq => 'daily', :priority => 0.8
-  url faqs_url, :last_mod => DateTime.now, :change_freq => 'daily', :priority => 0.8
+  #url howwework_url, :last_mod => DateTime.now, :change_freq => 'daily', :priority => 0.8
+  #url pricing_url, :last_mod => DateTime.now, :change_freq => 'daily', :priority => 0.8
+  #url faqs_url, :last_mod => DateTime.now, :change_freq => 'daily', :priority => 0.8
   
-  url newquote_url, :last_mod => DateTime.now, :change_freq => 'daily', :priority => 1
+  #url newquote_url, :last_mod => DateTime.now, :change_freq => 'daily', :priority => 1
   
   #new_page!
   
