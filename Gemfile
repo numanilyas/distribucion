@@ -17,7 +17,7 @@ end
 
 
   
-gem 'gretel'
+gem 'gretel', '2.1.0'
 gem 'metamagic'
 gem 'friendly_id', '~> 4.0.9'
 gem 'dynamic_sitemaps', '1.0.8' 

@@ -135,7 +135,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   dynamic_sitemaps (= 1.0.8)
   friendly_id (~> 4.0.9)
-  gretel
+  gretel (= 2.1.0)
   jquery-rails
   metamagic
   newrelic_rpm
